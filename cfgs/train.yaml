@@ -1,0 +1,15 @@
+use_ddp: True   # whether to use DataDistributedParallel, for multi-gpus.
+port: 9091  # the port for the DataDistributedParallel training.
+
+resume:
+work_dir: ./result5   # the directory to save checkpoints, validation images, and the log.
+
+decomposition: data/chn_decomposition.json   # path to the "decomposition rule" file.
+primals: data/chn_primals.json   # path to the "primals" file.
+
+dset:   # leave blank
+  train:   # leave blank
+    data_dir: data/ttfs1/train   # path to .ttf files for the training
+  val:   # leave blank
+    data_dir: data/ttfs1/val   # path to .ttf files for the validation
+    source_font: data/ttfs1/val/1.ttf   # path to the .ttf file used as the source font during the validation

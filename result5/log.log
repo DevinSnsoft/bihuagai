@@ -1,0 +1,779 @@
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Get dataset ...
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Run Argv:
+> train.py cfgs/train.yaml
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Args:
+config_paths = ['cfgs/train.yaml']
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Configs:
+use_ddp: True
+port: 9091
+batch_size: 8
+resume: None
+force_resume: False
+work_dir: result5
+max_iter: 800000
+seed: 2
+g_lr: 0.0002
+d_lr: 0.001
+ac_lr: 0.0002
+n_workers: 0
+adam_betas: 
+  - 0.0
+  - 0.9
+init: kaiming
+language: chn
+decomposition: data/chn_decomposition.json
+primals: data/chn_primals.json
+dset_aug: 
+  normalize: True
+  random_affine: False
+dset: 
+  train: 
+    data_dir: data/ttfs1/train
+    n_in_s: 3
+    n_in_c: 3
+  val: 
+    data_dir: data/ttfs1/val
+    n_ref: 4
+    source_font: data/ttfs1/val/1.ttf
+  test: 
+    data_dir: None
+    source_font: None
+    gen_chars_file: None
+C: 32
+g_args: 
+  style_enc: 
+    norm: in
+    activ: relu
+    pad_type: zero
+    skip_scale_var: False
+  experts: 
+    n_experts: 6
+    norm: in
+    activ: relu
+    pad_type: zero
+    skip_scale_var: False
+  emb_num: 2
+  dec: 
+    norm: in
+    activ: relu
+    pad_type: zero
+    out: sigmoid
+d_args: 
+  w_norm: spectral
+  activ: relu
+  gap_activ: relu
+  pad_type: zero
+  res_scale_var: False
+ac_args: 
+  norm: in
+  activ: relu
+  pad_type: zero
+  conv_dropout: 0.3
+  clf_dropout: 0.2
+pixel_loss_type: l1
+pixel_w: 0.1
+gan_w: 1.0
+fm_layers: all
+fm_w: 1.0
+ac_w: 1.0
+ac_gen_w: 1.0
+ac_cross_w: 1.0
+indp_exp_w: 1.0
+indp_fact_w: 1.0
+save: all-last
+print_freq: 100
+val_freq: 1000
+save_freq: 50000
+tb_freq: -1
+gpu: 0
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Get dataset ...
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Build model ...
+[37m[36mINFO[0m[0m::04/07 10:05:01 | Build model ...
+[37m[36mINFO[0m[0m::04/07 10:05:04 | Start training ...
+[37m[36mINFO[0m[0m::04/07 10:05:04 | Start training ...
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Run Argv:
+> train.py cfgs/train.yaml
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Args:
+config_paths = ['cfgs/train.yaml']
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Configs:
+use_ddp: True
+port: 9091
+batch_size: 4
+resume: None
+force_resume: False
+work_dir: result5
+max_iter: 800000
+seed: 2
+g_lr: 0.0002
+d_lr: 0.001
+ac_lr: 0.0002
+n_workers: 0
+adam_betas: 
+  - 0.0
+  - 0.9
+init: kaiming
+language: chn
+decomposition: data/chn_decomposition.json
+primals: data/chn_primals.json
+dset_aug: 
+  normalize: True
+  random_affine: False
+dset: 
+  train: 
+    data_dir: data/ttfs1/train
+    n_in_s: 3
+    n_in_c: 3
+  val: 
+    data_dir: data/ttfs1/val
+    n_ref: 4
+    source_font: data/ttfs1/val/1.ttf
+  test: 
+    data_dir: None
+    source_font: None
+    gen_chars_file: None
+C: 32
+g_args: 
+  style_enc: 
+    norm: in
+    activ: relu
+    pad_type: zero
+    skip_scale_var: False
+  experts: 
+    n_experts: 6
+    norm: in
+    activ: relu
+    pad_type: zero
+    skip_scale_var: False
+  emb_num: 2
+  dec: 
+    norm: in
+    activ: relu
+    pad_type: zero
+    out: sigmoid
+d_args: 
+  w_norm: spectral
+  activ: relu
+  gap_activ: relu
+  pad_type: zero
+  res_scale_var: False
+ac_args: 
+  norm: in
+  activ: relu
+  pad_type: zero
+  conv_dropout: 0.3
+  clf_dropout: 0.2
+pixel_loss_type: l1
+pixel_w: 0.1
+gan_w: 1.0
+fm_layers: all
+fm_w: 1.0
+ac_w: 1.0
+ac_gen_w: 1.0
+ac_cross_w: 1.0
+indp_exp_w: 1.0
+indp_fact_w: 1.0
+save: all-last
+print_freq: 100
+val_freq: 1000
+save_freq: 50000
+tb_freq: -1
+gpu: 0
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Get dataset ...
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Get dataset ...
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Build model ...
+[37m[36mINFO[0m[0m::04/07 10:06:13 | Build model ...
+[37m[36mINFO[0m[0m::04/07 10:06:18 | Start training ...
+[37m[36mINFO[0m[0m::04/07 10:06:18 | Start training ...
+[37m[36mINFO[0m[0m::04/07 10:06:40 | Step       0
+|D             3.961 |G            -0.430 |FM            0.217 |R_font        1.000 |F_font        0.250 |R_uni         0.500 |F_uni         0.250
+|AC_s          3.287 |AC_c          6.885 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      17.4% |AC_acc_c       0.9%
+|AC_g_s        3.828 |AC_g_c        6.393 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    12.5% |AC_g_acc_c     1.8%
+|L1            0.115 |INDP_EXP     0.0588 |INDP_FACT    0.2844
+[37m[36mINFO[0m[0m::04/07 10:14:01 | Step     100
+|D             3.044 |G             1.841 |FM            0.280 |R_font        0.900 |F_font        0.720 |R_uni         0.470 |F_uni         0.578
+|AC_s          6.643 |AC_c          5.761 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      22.3% |AC_acc_c       3.4%
+|AC_g_s        5.689 |AC_g_c        5.610 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    20.6% |AC_g_acc_c     2.0%
+|L1            0.084 |INDP_EXP     0.0324 |INDP_FACT    0.1902
+[37m[36mINFO[0m[0m::04/07 10:21:21 | Step     200
+|D             3.035 |G             1.434 |FM            0.181 |R_font        0.830 |F_font        0.875 |R_uni         0.527 |F_uni         0.718
+|AC_s          3.178 |AC_c          5.486 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      30.5% |AC_acc_c       3.1%
+|AC_g_s        3.641 |AC_g_c        5.381 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    23.9% |AC_g_acc_c     2.5%
+|L1            0.052 |INDP_EXP     0.0210 |INDP_FACT    0.1311
+[37m[36mINFO[0m[0m::04/07 10:28:42 | Step     300
+|D             3.631 |G             0.480 |FM            0.097 |R_font        0.710 |F_font        0.700 |R_uni         0.507 |F_uni         0.690
+|AC_s          1.613 |AC_c          5.303 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      51.9% |AC_acc_c       3.2%
+|AC_g_s        2.690 |AC_g_c        5.493 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    33.4% |AC_g_acc_c     3.4%
+|L1            0.036 |INDP_EXP     0.0167 |INDP_FACT    0.1054
+[37m[36mINFO[0m[0m::04/07 10:36:03 | Step     400
+|D             3.706 |G             0.299 |FM            0.088 |R_font        0.670 |F_font        0.642 |R_uni         0.492 |F_uni         0.655
+|AC_s          1.069 |AC_c          5.049 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      58.8% |AC_acc_c       3.2%
+|AC_g_s        1.992 |AC_g_c        5.451 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    40.2% |AC_g_acc_c     4.4%
+|L1            0.033 |INDP_EXP     0.0107 |INDP_FACT    0.0780
+[37m[36mINFO[0m[0m::04/07 10:43:23 | Step     500
+|D             3.635 |G             0.470 |FM            0.088 |R_font        0.560 |F_font        0.750 |R_uni         0.475 |F_uni         0.685
+|AC_s          0.788 |AC_c          5.037 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      67.5% |AC_acc_c       3.0%
+|AC_g_s        1.524 |AC_g_c        5.544 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    50.0% |AC_g_acc_c     3.8%
+|L1            0.033 |INDP_EXP     0.0109 |INDP_FACT    0.0780
+[37m[36mINFO[0m[0m::04/07 10:50:42 | Step     600
+|D             3.687 |G             0.377 |FM            0.081 |R_font        0.532 |F_font        0.730 |R_uni         0.492 |F_uni         0.657
+|AC_s          0.532 |AC_c          4.997 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      78.2% |AC_acc_c       3.0%
+|AC_g_s        0.911 |AC_g_c        5.509 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    64.7% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0081 |INDP_FACT    0.0598
+[37m[36mINFO[0m[0m::04/07 10:58:04 | Step     700
+|D             3.734 |G             0.337 |FM            0.077 |R_font        0.522 |F_font        0.728 |R_uni         0.440 |F_uni         0.672
+|AC_s          0.460 |AC_c          4.938 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      80.5% |AC_acc_c       3.0%
+|AC_g_s        0.769 |AC_g_c        5.370 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    70.0% |AC_g_acc_c     3.5%
+|L1            0.032 |INDP_EXP     0.0065 |INDP_FACT    0.0469
+[37m[36mINFO[0m[0m::04/07 11:05:25 | Step     800
+|D             3.740 |G             0.389 |FM            0.075 |R_font        0.502 |F_font        0.745 |R_uni         0.472 |F_uni         0.657
+|AC_s          0.398 |AC_c          4.830 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      83.0% |AC_acc_c       3.1%
+|AC_g_s        0.631 |AC_g_c        5.008 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    73.8% |AC_g_acc_c     3.4%
+|L1            0.031 |INDP_EXP     0.0049 |INDP_FACT    0.0406
+[37m[36mINFO[0m[0m::04/07 11:12:44 | Step     900
+|D             3.758 |G             0.291 |FM            0.075 |R_font        0.578 |F_font        0.665 |R_uni         0.472 |F_uni         0.680
+|AC_s          0.336 |AC_c          4.873 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      86.2% |AC_acc_c       3.1%
+|AC_g_s        0.553 |AC_g_c        5.022 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    76.6% |AC_g_acc_c     3.2%
+|L1            0.031 |INDP_EXP     0.0059 |INDP_FACT    0.0444
+[37m[36mINFO[0m[0m::04/07 11:20:04 | Step    1000
+|D             3.751 |G             0.410 |FM            0.070 |R_font        0.443 |F_font        0.745 |R_uni         0.500 |F_uni         0.667
+|AC_s          0.330 |AC_c          4.725 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      88.3% |AC_acc_c       3.6%
+|AC_g_s        0.455 |AC_g_c        4.779 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    83.1% |AC_g_acc_c     4.0%
+|L1            0.032 |INDP_EXP     0.0045 |INDP_FACT    0.0395
+[37m[36mINFO[0m[0m::04/07 11:20:04 | Validation at Epoch = 0.248
+[37m[36mINFO[0m[0m::04/07 11:20:19 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 11:27:40 | Step    1100
+|D             3.744 |G             0.266 |FM            0.071 |R_font        0.562 |F_font        0.630 |R_uni         0.472 |F_uni         0.623
+|AC_s          0.247 |AC_c          4.797 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      92.5% |AC_acc_c       3.0%
+|AC_g_s        0.322 |AC_g_c        4.882 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    89.4% |AC_g_acc_c     3.0%
+|L1            0.031 |INDP_EXP     0.0037 |INDP_FACT    0.0331
+[37m[36mINFO[0m[0m::04/07 11:35:00 | Step    1200
+|D             3.710 |G             0.178 |FM            0.070 |R_font        0.620 |F_font        0.585 |R_uni         0.507 |F_uni         0.593
+|AC_s          0.194 |AC_c          4.676 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      95.2% |AC_acc_c       3.5%
+|AC_g_s        0.237 |AC_g_c        4.738 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    94.3% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0041 |INDP_FACT    0.0340
+[37m[36mINFO[0m[0m::04/07 11:42:20 | Step    1300
+|D             3.737 |G             0.206 |FM            0.069 |R_font        0.618 |F_font        0.603 |R_uni         0.522 |F_uni         0.605
+|AC_s          0.125 |AC_c          4.744 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      96.4% |AC_acc_c       3.1%
+|AC_g_s        0.113 |AC_g_c        4.735 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    97.1% |AC_g_acc_c     3.1%
+|L1            0.031 |INDP_EXP     0.0029 |INDP_FACT    0.0299
+[37m[36mINFO[0m[0m::04/07 11:49:40 | Step    1400
+|D             3.767 |G             0.248 |FM            0.065 |R_font        0.593 |F_font        0.618 |R_uni         0.540 |F_uni         0.590
+|AC_s          0.136 |AC_c          4.733 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      96.7% |AC_acc_c       3.2%
+|AC_g_s        0.149 |AC_g_c        4.787 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    96.2% |AC_g_acc_c     2.9%
+|L1            0.030 |INDP_EXP     0.0029 |INDP_FACT    0.0250
+[37m[36mINFO[0m[0m::04/07 11:57:01 | Step    1500
+|D             3.742 |G             0.244 |FM            0.063 |R_font        0.557 |F_font        0.665 |R_uni         0.495 |F_uni         0.613
+|AC_s          0.081 |AC_c          4.721 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      97.9% |AC_acc_c       3.1%
+|AC_g_s        0.069 |AC_g_c        4.669 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.6% |AC_g_acc_c     3.0%
+|L1            0.030 |INDP_EXP     0.0029 |INDP_FACT    0.0284
+[37m[36mINFO[0m[0m::04/07 12:04:21 | Step    1600
+|D             3.684 |G             0.265 |FM            0.065 |R_font        0.588 |F_font        0.610 |R_uni         0.547 |F_uni         0.610
+|AC_s          0.115 |AC_c          4.648 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      97.0% |AC_acc_c       3.3%
+|AC_g_s        0.180 |AC_g_c        4.573 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    94.8% |AC_g_acc_c     3.3%
+|L1            0.031 |INDP_EXP     0.0027 |INDP_FACT    0.0246
+[37m[36mINFO[0m[0m::04/07 12:11:43 | Step    1700
+|D             3.755 |G             0.145 |FM            0.062 |R_font        0.670 |F_font        0.562 |R_uni         0.460 |F_uni         0.570
+|AC_s          0.074 |AC_c          4.672 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.0% |AC_acc_c       3.2%
+|AC_g_s        0.069 |AC_g_c        4.717 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.2% |AC_g_acc_c     3.0%
+|L1            0.030 |INDP_EXP     0.0023 |INDP_FACT    0.0229
+[37m[36mINFO[0m[0m::04/07 12:19:02 | Step    1800
+|D             3.741 |G             0.166 |FM            0.061 |R_font        0.640 |F_font        0.568 |R_uni         0.512 |F_uni         0.565
+|AC_s          0.087 |AC_c          4.627 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      97.9% |AC_acc_c       3.3%
+|AC_g_s        0.064 |AC_g_c        4.595 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.7% |AC_g_acc_c     3.2%
+|L1            0.030 |INDP_EXP     0.0040 |INDP_FACT    0.0277
+[37m[36mINFO[0m[0m::04/07 12:26:22 | Step    1900
+|D             3.696 |G             0.247 |FM            0.063 |R_font        0.598 |F_font        0.620 |R_uni         0.537 |F_uni         0.608
+|AC_s          0.056 |AC_c          4.559 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.5% |AC_acc_c       3.6%
+|AC_g_s        0.091 |AC_g_c        4.479 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    97.5% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0045 |INDP_FACT    0.0268
+[37m[36mINFO[0m[0m::04/07 12:33:43 | Step    2000
+|D             3.696 |G             0.147 |FM            0.063 |R_font        0.685 |F_font        0.537 |R_uni         0.512 |F_uni         0.550
+|AC_s          0.099 |AC_c          4.570 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      97.8% |AC_acc_c       3.6%
+|AC_g_s        0.144 |AC_g_c        4.544 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    96.7% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0022 |INDP_FACT    0.0236
+[37m[36mINFO[0m[0m::04/07 12:33:43 | Validation at Epoch = 0.496
+[37m[36mINFO[0m[0m::04/07 12:33:56 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 12:41:17 | Step    2100
+|D             3.674 |G             0.336 |FM            0.060 |R_font        0.578 |F_font        0.693 |R_uni         0.520 |F_uni         0.652
+|AC_s          0.081 |AC_c          4.609 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.2% |AC_acc_c       3.3%
+|AC_g_s        0.090 |AC_g_c        4.540 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    97.8% |AC_g_acc_c     3.3%
+|L1            0.030 |INDP_EXP     0.0023 |INDP_FACT    0.0224
+[37m[36mINFO[0m[0m::04/07 12:48:38 | Step    2200
+|D             3.698 |G             0.297 |FM            0.060 |R_font        0.585 |F_font        0.690 |R_uni         0.530 |F_uni         0.632
+|AC_s          0.069 |AC_c          4.594 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.3% |AC_acc_c       3.4%
+|AC_g_s        0.038 |AC_g_c        4.573 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.9% |AC_g_acc_c     3.4%
+|L1            0.030 |INDP_EXP     0.0028 |INDP_FACT    0.0338
+[37m[36mINFO[0m[0m::04/07 12:55:59 | Step    2300
+|D             3.730 |G             0.064 |FM            0.061 |R_font        0.685 |F_font        0.530 |R_uni         0.492 |F_uni         0.565
+|AC_s          0.025 |AC_c          4.618 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.3% |AC_acc_c       3.4%
+|AC_g_s        0.045 |AC_g_c        4.512 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0042 |INDP_FACT    0.0285
+[37m[36mINFO[0m[0m::04/07 13:03:18 | Step    2400
+|D             3.674 |G             0.193 |FM            0.062 |R_font        0.647 |F_font        0.570 |R_uni         0.507 |F_uni         0.585
+|AC_s          0.139 |AC_c          4.591 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.2% |AC_acc_c       3.4%
+|AC_g_s        0.204 |AC_g_c        4.544 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    97.0% |AC_g_acc_c     3.3%
+|L1            0.030 |INDP_EXP     0.0028 |INDP_FACT    0.0276
+[37m[36mINFO[0m[0m::04/07 13:10:40 | Step    2500
+|D             3.730 |G             0.200 |FM            0.059 |R_font        0.620 |F_font        0.573 |R_uni         0.475 |F_uni         0.595
+|AC_s          0.041 |AC_c          4.597 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.7% |AC_acc_c       3.4%
+|AC_g_s        0.061 |AC_g_c        4.565 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.5% |AC_g_acc_c     3.3%
+|L1            0.031 |INDP_EXP     0.0029 |INDP_FACT    0.0247
+[37m[36mINFO[0m[0m::04/07 13:18:00 | Step    2600
+|D             3.655 |G             0.165 |FM            0.060 |R_font        0.693 |F_font        0.557 |R_uni         0.512 |F_uni         0.583
+|AC_s          0.115 |AC_c          4.605 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      97.9% |AC_acc_c       3.5%
+|AC_g_s        0.199 |AC_g_c        4.598 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    96.6% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0054 |INDP_FACT    0.0287
+[37m[36mINFO[0m[0m::04/07 13:25:21 | Step    2700
+|D             3.677 |G             0.265 |FM            0.061 |R_font        0.603 |F_font        0.627 |R_uni         0.497 |F_uni         0.642
+|AC_s          0.035 |AC_c          4.653 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.2% |AC_acc_c       3.1%
+|AC_g_s        0.048 |AC_g_c        4.602 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.7% |AC_g_acc_c     3.1%
+|L1            0.030 |INDP_EXP     0.0039 |INDP_FACT    0.0268
+[37m[36mINFO[0m[0m::04/07 13:32:42 | Step    2800
+|D             3.659 |G             0.351 |FM            0.059 |R_font        0.585 |F_font        0.675 |R_uni         0.485 |F_uni         0.635
+|AC_s          0.086 |AC_c          4.557 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.2% |AC_acc_c       3.5%
+|AC_g_s        0.057 |AC_g_c        4.452 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.9% |AC_g_acc_c     3.5%
+|L1            0.030 |INDP_EXP     0.0020 |INDP_FACT    0.0204
+[37m[36mINFO[0m[0m::04/07 13:40:02 | Step    2900
+|D             3.666 |G             0.422 |FM            0.059 |R_font        0.487 |F_font        0.745 |R_uni         0.495 |F_uni         0.635
+|AC_s          0.034 |AC_c          4.528 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.6%
+|AC_g_s        0.022 |AC_g_c        4.484 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     3.7%
+|L1            0.030 |INDP_EXP     0.0031 |INDP_FACT    0.0252
+[37m[36mINFO[0m[0m::04/07 13:47:23 | Step    3000
+|D             3.640 |G             0.340 |FM            0.062 |R_font        0.610 |F_font        0.672 |R_uni         0.535 |F_uni         0.618
+|AC_s          0.021 |AC_c          4.564 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       3.6%
+|AC_g_s        0.014 |AC_g_c        4.486 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0025 |INDP_FACT    0.0198
+[37m[36mINFO[0m[0m::04/07 13:47:23 | Validation at Epoch = 0.745
+[37m[36mINFO[0m[0m::04/07 13:47:36 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 13:54:56 | Step    3100
+|D             3.704 |G             0.320 |FM            0.060 |R_font        0.537 |F_font        0.688 |R_uni         0.522 |F_uni         0.632
+|AC_s          0.034 |AC_c          4.510 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.6%
+|AC_g_s        0.046 |AC_g_c        4.443 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0021 |INDP_FACT    0.0221
+[37m[36mINFO[0m[0m::04/07 14:02:17 | Step    3200
+|D             3.564 |G             0.433 |FM            0.066 |R_font        0.605 |F_font        0.720 |R_uni         0.522 |F_uni         0.693
+|AC_s          0.020 |AC_c          4.556 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       3.4%
+|AC_g_s        0.043 |AC_g_c        4.485 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.7% |AC_g_acc_c     3.5%
+|L1            0.032 |INDP_EXP     0.0039 |INDP_FACT    0.0272
+[37m[36mINFO[0m[0m::04/07 14:09:38 | Step    3300
+|D             3.647 |G             0.310 |FM            0.062 |R_font        0.603 |F_font        0.652 |R_uni         0.510 |F_uni         0.652
+|AC_s          0.038 |AC_c          4.501 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.7%
+|AC_g_s        0.030 |AC_g_c        4.393 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0019 |INDP_FACT    0.0202
+[37m[36mINFO[0m[0m::04/07 14:16:58 | Step    3400
+|D             3.667 |G             0.233 |FM            0.061 |R_font        0.655 |F_font        0.613 |R_uni         0.507 |F_uni         0.600
+|AC_s          0.048 |AC_c          4.525 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.6%
+|AC_g_s        0.020 |AC_g_c        4.499 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.4%
+|L1            0.030 |INDP_EXP     0.0027 |INDP_FACT    0.0214
+[37m[36mINFO[0m[0m::04/07 14:24:18 | Step    3500
+|D             3.634 |G             0.333 |FM            0.064 |R_font        0.623 |F_font        0.647 |R_uni         0.505 |F_uni         0.647
+|AC_s          0.029 |AC_c          4.558 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.5%
+|AC_g_s        0.046 |AC_g_c        4.581 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.5% |AC_g_acc_c     3.3%
+|L1            0.031 |INDP_EXP     0.0043 |INDP_FACT    0.0249
+[37m[36mINFO[0m[0m::04/07 14:31:38 | Step    3600
+|D             3.724 |G             0.118 |FM            0.060 |R_font        0.667 |F_font        0.542 |R_uni         0.515 |F_uni         0.578
+|AC_s          0.026 |AC_c          4.548 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.3% |AC_acc_c       3.5%
+|AC_g_s        0.030 |AC_g_c        4.550 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     3.3%
+|L1            0.031 |INDP_EXP     0.0016 |INDP_FACT    0.0178
+[37m[36mINFO[0m[0m::04/07 14:38:58 | Step    3700
+|D             3.702 |G             0.311 |FM            0.062 |R_font        0.550 |F_font        0.660 |R_uni         0.552 |F_uni         0.630
+|AC_s          0.063 |AC_c          4.464 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.7% |AC_acc_c       3.7%
+|AC_g_s        0.113 |AC_g_c        4.374 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.1% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0019 |INDP_FACT    0.0205
+[37m[36mINFO[0m[0m::04/07 14:46:20 | Step    3800
+|D             3.653 |G             0.093 |FM            0.065 |R_font        0.700 |F_font        0.512 |R_uni         0.522 |F_uni         0.552
+|AC_s          0.021 |AC_c          4.478 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       3.8%
+|AC_g_s        0.051 |AC_g_c        4.430 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.5% |AC_g_acc_c     3.8%
+|L1            0.032 |INDP_EXP     0.0020 |INDP_FACT    0.0216
+[37m[36mINFO[0m[0m::04/07 14:53:40 | Step    3900
+|D             3.667 |G             0.267 |FM            0.063 |R_font        0.632 |F_font        0.625 |R_uni         0.535 |F_uni         0.627
+|AC_s          0.033 |AC_c          4.559 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.6%
+|AC_g_s        0.040 |AC_g_c        4.545 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0028 |INDP_FACT    0.0219
+[37m[36mINFO[0m[0m::04/07 15:01:01 | Step    4000
+|D             3.637 |G             0.273 |FM            0.062 |R_font        0.615 |F_font        0.632 |R_uni         0.550 |F_uni         0.637
+|AC_s          0.016 |AC_c          4.470 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       3.9%
+|AC_g_s        0.045 |AC_g_c        4.402 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.6% |AC_g_acc_c     3.8%
+|L1            0.030 |INDP_EXP     0.0026 |INDP_FACT    0.0203
+[37m[36mINFO[0m[0m::04/07 15:01:01 | Validation at Epoch = 0.993
+[37m[36mINFO[0m[0m::04/07 15:01:15 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 15:08:51 | Step    4100
+|D             3.642 |G             0.362 |FM            0.061 |R_font        0.612 |F_font        0.682 |R_uni         0.524 |F_uni         0.627
+|AC_s          0.024 |AC_c          4.572 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.3% |AC_acc_c       3.4%
+|AC_g_s        0.020 |AC_g_c        4.543 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0050 |INDP_FACT    0.0263
+[37m[36mINFO[0m[0m::04/07 15:16:11 | Step    4200
+|D             3.728 |G             0.192 |FM            0.060 |R_font        0.642 |F_font        0.583 |R_uni         0.522 |F_uni         0.575
+|AC_s          0.010 |AC_c          4.478 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       3.7%
+|AC_g_s        0.042 |AC_g_c        4.435 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0021 |INDP_FACT    0.0196
+[37m[36mINFO[0m[0m::04/07 15:23:30 | Step    4300
+|D             3.704 |G             0.296 |FM            0.060 |R_font        0.578 |F_font        0.652 |R_uni         0.520 |F_uni         0.595
+|AC_s          0.022 |AC_c          4.505 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       3.6%
+|AC_g_s        0.012 |AC_g_c        4.440 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.7% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0018 |INDP_FACT    0.0168
+[37m[36mINFO[0m[0m::04/07 15:30:49 | Step    4400
+|D             3.749 |G             0.489 |FM            0.057 |R_font        0.432 |F_font        0.762 |R_uni         0.490 |F_uni         0.688
+|AC_s          0.029 |AC_c          4.461 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.1% |AC_acc_c       3.9%
+|AC_g_s        0.012 |AC_g_c        4.320 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.6% |AC_g_acc_c     4.1%
+|L1            0.031 |INDP_EXP     0.0020 |INDP_FACT    0.0165
+[37m[36mINFO[0m[0m::04/07 15:38:09 | Step    4500
+|D             3.652 |G             0.237 |FM            0.060 |R_font        0.650 |F_font        0.603 |R_uni         0.480 |F_uni         0.580
+|AC_s          0.021 |AC_c          4.459 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.5% |AC_acc_c       3.7%
+|AC_g_s        0.017 |AC_g_c        4.411 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.6%
+|L1            0.030 |INDP_EXP     0.0019 |INDP_FACT    0.0179
+[37m[36mINFO[0m[0m::04/07 15:45:30 | Step    4600
+|D             3.593 |G             0.402 |FM            0.065 |R_font        0.620 |F_font        0.703 |R_uni         0.472 |F_uni         0.670
+|AC_s          0.025 |AC_c          4.486 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.3% |AC_acc_c       3.8%
+|AC_g_s        0.070 |AC_g_c        4.422 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.5% |AC_g_acc_c     3.9%
+|L1            0.030 |INDP_EXP     0.0023 |INDP_FACT    0.0195
+[37m[36mINFO[0m[0m::04/07 15:52:51 | Step    4700
+|D             3.645 |G             0.406 |FM            0.064 |R_font        0.540 |F_font        0.713 |R_uni         0.542 |F_uni         0.600
+|AC_s          0.022 |AC_c          4.597 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.5% |AC_acc_c       3.3%
+|AC_g_s        0.026 |AC_g_c        4.557 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.4%
+|L1            0.031 |INDP_EXP     0.0035 |INDP_FACT    0.0249
+[37m[36mINFO[0m[0m::04/07 16:00:13 | Step    4800
+|D             3.654 |G             0.407 |FM            0.061 |R_font        0.540 |F_font        0.700 |R_uni         0.525 |F_uni         0.665
+|AC_s          0.032 |AC_c          4.507 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.2% |AC_acc_c       3.6%
+|AC_g_s        0.025 |AC_g_c        4.491 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0023 |INDP_FACT    0.0201
+[37m[36mINFO[0m[0m::04/07 16:07:33 | Step    4900
+|D             3.619 |G             0.449 |FM            0.063 |R_font        0.520 |F_font        0.713 |R_uni         0.495 |F_uni         0.708
+|AC_s          0.012 |AC_c          4.454 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       3.9%
+|AC_g_s        0.024 |AC_g_c        4.388 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.9%
+|L1            0.031 |INDP_EXP     0.0034 |INDP_FACT    0.0227
+[37m[36mINFO[0m[0m::04/07 16:14:55 | Step    5000
+|D             3.720 |G             0.203 |FM            0.062 |R_font        0.615 |F_font        0.588 |R_uni         0.517 |F_uni         0.605
+|AC_s          0.031 |AC_c          4.485 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.2% |AC_acc_c       4.0%
+|AC_g_s        0.022 |AC_g_c        4.414 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     4.1%
+|L1            0.031 |INDP_EXP     0.0027 |INDP_FACT    0.0215
+[37m[36mINFO[0m[0m::04/07 16:14:55 | Validation at Epoch = 1.241
+[37m[36mINFO[0m[0m::04/07 16:15:08 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 16:22:28 | Step    5100
+|D             3.600 |G             0.332 |FM            0.064 |R_font        0.632 |F_font        0.637 |R_uni         0.495 |F_uni         0.642
+|AC_s          0.013 |AC_c          4.491 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       3.8%
+|AC_g_s        0.020 |AC_g_c        4.425 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0026 |INDP_FACT    0.0187
+[37m[36mINFO[0m[0m::04/07 16:29:50 | Step    5200
+|D             3.612 |G             0.228 |FM            0.063 |R_font        0.667 |F_font        0.590 |R_uni         0.512 |F_uni         0.595
+|AC_s          0.070 |AC_c          4.476 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      98.8% |AC_acc_c       3.8%
+|AC_g_s        0.137 |AC_g_c        4.438 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    97.6% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0028 |INDP_FACT    0.0225
+[37m[36mINFO[0m[0m::04/07 16:37:11 | Step    5300
+|D             3.472 |G             0.425 |FM            0.067 |R_font        0.652 |F_font        0.688 |R_uni         0.512 |F_uni         0.657
+|AC_s          0.006 |AC_c          4.378 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c       4.1%
+|AC_g_s        0.011 |AC_g_c        4.315 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.6% |AC_g_acc_c     4.0%
+|L1            0.031 |INDP_EXP     0.0027 |INDP_FACT    0.0187
+[37m[36mINFO[0m[0m::04/07 16:44:32 | Step    5400
+|D             3.689 |G             0.418 |FM            0.065 |R_font        0.545 |F_font        0.715 |R_uni         0.465 |F_uni         0.665
+|AC_s          0.012 |AC_c          4.499 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       3.8%
+|AC_g_s        0.028 |AC_g_c        4.524 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     3.5%
+|L1            0.031 |INDP_EXP     0.0032 |INDP_FACT    0.0198
+[37m[36mINFO[0m[0m::04/07 16:51:53 | Step    5500
+|D             3.633 |G             0.307 |FM            0.064 |R_font        0.590 |F_font        0.655 |R_uni         0.540 |F_uni         0.657
+|AC_s          0.013 |AC_c          4.452 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       4.0%
+|AC_g_s        0.011 |AC_g_c        4.412 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.6% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0033 |INDP_FACT    0.0200
+[37m[36mINFO[0m[0m::04/07 16:59:13 | Step    5600
+|D             3.621 |G             0.330 |FM            0.067 |R_font        0.610 |F_font        0.660 |R_uni         0.527 |F_uni         0.650
+|AC_s          0.021 |AC_c          4.391 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       4.0%
+|AC_g_s        0.023 |AC_g_c        4.364 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.8%
+|L1            0.032 |INDP_EXP     0.0036 |INDP_FACT    0.0184
+[37m[36mINFO[0m[0m::04/07 17:06:35 | Step    5700
+|D             3.549 |G             0.366 |FM            0.065 |R_font        0.652 |F_font        0.665 |R_uni         0.542 |F_uni         0.642
+|AC_s          0.017 |AC_c          4.417 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       4.1%
+|AC_g_s        0.017 |AC_g_c        4.374 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.6% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0041 |INDP_FACT    0.0171
+[37m[36mINFO[0m[0m::04/07 17:13:56 | Step    5800
+|D             3.602 |G             0.413 |FM            0.066 |R_font        0.522 |F_font        0.715 |R_uni         0.482 |F_uni         0.525
+|AC_s          0.015 |AC_c          4.445 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       4.0%
+|AC_g_s        0.019 |AC_g_c        4.451 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0041 |INDP_FACT    0.0180
+[37m[36mINFO[0m[0m::04/07 17:21:17 | Step    5900
+|D             3.577 |G             0.403 |FM            0.068 |R_font        0.600 |F_font        0.708 |R_uni         0.550 |F_uni         0.635
+|AC_s          0.024 |AC_c          4.305 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       4.7%
+|AC_g_s        0.031 |AC_g_c        4.243 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     4.2%
+|L1            0.031 |INDP_EXP     0.0061 |INDP_FACT    0.0229
+[37m[36mINFO[0m[0m::04/07 17:28:37 | Step    6000
+|D             3.485 |G             0.440 |FM            0.069 |R_font        0.585 |F_font        0.708 |R_uni         0.500 |F_uni         0.610
+|AC_s          0.033 |AC_c          4.404 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.2% |AC_acc_c       4.3%
+|AC_g_s        0.016 |AC_g_c        4.388 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.9%
+|L1            0.031 |INDP_EXP     0.0055 |INDP_FACT    0.0189
+[37m[36mINFO[0m[0m::04/07 17:28:37 | Validation at Epoch = 1.489
+[37m[36mINFO[0m[0m::04/07 17:28:50 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 17:36:09 | Step    6100
+|D             3.459 |G             0.551 |FM            0.071 |R_font        0.588 |F_font        0.787 |R_uni         0.487 |F_uni         0.725
+|AC_s          0.016 |AC_c          4.358 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       4.6%
+|AC_g_s        0.015 |AC_g_c        4.358 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.6% |AC_g_acc_c     4.1%
+|L1            0.031 |INDP_EXP     0.0046 |INDP_FACT    0.0173
+[37m[36mINFO[0m[0m::04/07 17:43:30 | Step    6200
+|D             3.505 |G             0.330 |FM            0.068 |R_font        0.662 |F_font        0.630 |R_uni         0.522 |F_uni         0.588
+|AC_s          0.026 |AC_c          4.342 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.3% |AC_acc_c       4.5%
+|AC_g_s        0.036 |AC_g_c        4.359 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     4.1%
+|L1            0.030 |INDP_EXP     0.0048 |INDP_FACT    0.0193
+[37m[36mINFO[0m[0m::04/07 17:50:51 | Step    6300
+|D             3.479 |G             0.442 |FM            0.072 |R_font        0.657 |F_font        0.690 |R_uni         0.530 |F_uni         0.670
+|AC_s          0.012 |AC_c          4.322 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       4.8%
+|AC_g_s        0.007 |AC_g_c        4.330 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.7% |AC_g_acc_c     4.2%
+|L1            0.031 |INDP_EXP     0.0047 |INDP_FACT    0.0167
+[37m[36mINFO[0m[0m::04/07 17:58:12 | Step    6400
+|D             3.519 |G             0.350 |FM            0.068 |R_font        0.660 |F_font        0.652 |R_uni         0.568 |F_uni         0.645
+|AC_s          0.010 |AC_c          4.371 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       4.8%
+|AC_g_s        0.025 |AC_g_c        4.447 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     4.1%
+|L1            0.031 |INDP_EXP     0.0051 |INDP_FACT    0.0183
+[37m[36mINFO[0m[0m::04/07 18:05:32 | Step    6500
+|D             3.473 |G             0.439 |FM            0.070 |R_font        0.660 |F_font        0.680 |R_uni         0.502 |F_uni         0.733
+|AC_s          0.012 |AC_c          4.325 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       5.0%
+|AC_g_s        0.025 |AC_g_c        4.383 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     4.3%
+|L1            0.031 |INDP_EXP     0.0055 |INDP_FACT    0.0205
+[37m[36mINFO[0m[0m::04/07 18:12:54 | Step    6600
+|D             3.436 |G             0.412 |FM            0.072 |R_font        0.672 |F_font        0.672 |R_uni         0.535 |F_uni         0.700
+|AC_s          0.011 |AC_c          4.381 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       4.8%
+|AC_g_s        0.032 |AC_g_c        4.428 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0053 |INDP_FACT    0.0193
+[37m[36mINFO[0m[0m::04/07 18:20:14 | Step    6700
+|D             3.420 |G             0.540 |FM            0.073 |R_font        0.672 |F_font        0.733 |R_uni         0.532 |F_uni         0.655
+|AC_s          0.035 |AC_c          4.347 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.0% |AC_acc_c       4.7%
+|AC_g_s        0.022 |AC_g_c        4.465 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0066 |INDP_FACT    0.0223
+[37m[36mINFO[0m[0m::04/07 18:27:35 | Step    6800
+|D             3.406 |G             0.408 |FM            0.073 |R_font        0.718 |F_font        0.670 |R_uni         0.480 |F_uni         0.672
+|AC_s          0.014 |AC_c          4.333 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       5.2%
+|AC_g_s        0.026 |AC_g_c        4.464 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.7%
+|L1            0.032 |INDP_EXP     0.0058 |INDP_FACT    0.0182
+[37m[36mINFO[0m[0m::04/07 18:34:55 | Step    6900
+|D             3.380 |G             0.483 |FM            0.072 |R_font        0.672 |F_font        0.698 |R_uni         0.540 |F_uni         0.662
+|AC_s          0.016 |AC_c          4.320 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       5.3%
+|AC_g_s        0.021 |AC_g_c        4.387 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0066 |INDP_FACT    0.0193
+[37m[36mINFO[0m[0m::04/07 18:42:14 | Step    7000
+|D             3.457 |G             0.466 |FM            0.072 |R_font        0.667 |F_font        0.708 |R_uni         0.460 |F_uni         0.647
+|AC_s          0.021 |AC_c          4.276 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.5% |AC_acc_c       5.4%
+|AC_g_s        0.027 |AC_g_c        4.377 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     3.9%
+|L1            0.031 |INDP_EXP     0.0069 |INDP_FACT    0.0217
+[37m[36mINFO[0m[0m::04/07 18:42:14 | Validation at Epoch = 1.737
+[37m[36mINFO[0m[0m::04/07 18:42:27 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 18:49:47 | Step    7100
+|D             3.360 |G             0.513 |FM            0.074 |R_font        0.700 |F_font        0.715 |R_uni         0.545 |F_uni         0.667
+|AC_s          0.006 |AC_c          4.264 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c       5.5%
+|AC_g_s        0.044 |AC_g_c        4.386 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0068 |INDP_FACT    0.0200
+[37m[36mINFO[0m[0m::04/07 18:57:05 | Step    7200
+|D             3.498 |G             0.516 |FM            0.074 |R_font        0.610 |F_font        0.718 |R_uni         0.512 |F_uni         0.708
+|AC_s          0.021 |AC_c          4.217 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       5.8%
+|AC_g_s        0.024 |AC_g_c        4.352 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     4.0%
+|L1            0.031 |INDP_EXP     0.0080 |INDP_FACT    0.0232
+[37m[36mINFO[0m[0m::04/07 19:04:25 | Step    7300
+|D             3.420 |G             0.523 |FM            0.073 |R_font        0.627 |F_font        0.738 |R_uni         0.495 |F_uni         0.723
+|AC_s          0.012 |AC_c          4.260 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       5.7%
+|AC_g_s        0.010 |AC_g_c        4.342 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     4.1%
+|L1            0.031 |INDP_EXP     0.0076 |INDP_FACT    0.0199
+[37m[36mINFO[0m[0m::04/07 19:11:47 | Step    7400
+|D             3.368 |G             0.446 |FM            0.076 |R_font        0.718 |F_font        0.685 |R_uni         0.527 |F_uni         0.623
+|AC_s          0.013 |AC_c          4.294 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       5.7%
+|AC_g_s        0.022 |AC_g_c        4.392 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     4.0%
+|L1            0.030 |INDP_EXP     0.0089 |INDP_FACT    0.0236
+[37m[36mINFO[0m[0m::04/07 19:19:05 | Step    7500
+|D             3.423 |G             0.471 |FM            0.075 |R_font        0.693 |F_font        0.705 |R_uni         0.550 |F_uni         0.662
+|AC_s          0.026 |AC_c          4.303 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       5.3%
+|AC_g_s        0.041 |AC_g_c        4.518 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0087 |INDP_FACT    0.0202
+[37m[36mINFO[0m[0m::04/07 19:26:25 | Step    7600
+|D             3.341 |G             0.568 |FM            0.077 |R_font        0.662 |F_font        0.745 |R_uni         0.522 |F_uni         0.625
+|AC_s          0.087 |AC_c          4.230 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.0% |AC_acc_c       5.9%
+|AC_g_s        0.073 |AC_g_c        4.447 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.5% |AC_g_acc_c     3.8%
+|L1            0.031 |INDP_EXP     0.0087 |INDP_FACT    0.0173
+[37m[36mINFO[0m[0m::04/07 19:33:46 | Step    7700
+|D             3.313 |G             0.510 |FM            0.075 |R_font        0.713 |F_font        0.745 |R_uni         0.482 |F_uni         0.728
+|AC_s          0.014 |AC_c          4.245 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       6.0%
+|AC_g_s        0.015 |AC_g_c        4.457 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0077 |INDP_FACT    0.0162
+[37m[36mINFO[0m[0m::04/07 19:41:08 | Step    7800
+|D             3.299 |G             0.562 |FM            0.079 |R_font        0.725 |F_font        0.705 |R_uni         0.535 |F_uni         0.695
+|AC_s          0.011 |AC_c          4.196 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       6.4%
+|AC_g_s        0.021 |AC_g_c        4.372 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.9%
+|L1            0.032 |INDP_EXP     0.0083 |INDP_FACT    0.0191
+[37m[36mINFO[0m[0m::04/07 19:48:28 | Step    7900
+|D             3.253 |G             0.622 |FM            0.078 |R_font        0.723 |F_font        0.738 |R_uni         0.530 |F_uni         0.735
+|AC_s          0.022 |AC_c          4.246 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.4% |AC_acc_c       5.8%
+|AC_g_s        0.016 |AC_g_c        4.428 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.5% |AC_g_acc_c     3.7%
+|L1            0.031 |INDP_EXP     0.0084 |INDP_FACT    0.0180
+[37m[36mINFO[0m[0m::04/07 19:55:49 | Step    8000
+|D             3.137 |G             0.707 |FM            0.082 |R_font        0.767 |F_font        0.795 |R_uni         0.502 |F_uni         0.680
+|AC_s          0.009 |AC_c          4.216 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       6.4%
+|AC_g_s        0.038 |AC_g_c        4.429 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.1% |AC_g_acc_c     4.0%
+|L1            0.031 |INDP_EXP     0.0082 |INDP_FACT    0.0163
+[37m[36mINFO[0m[0m::04/07 19:55:49 | Validation at Epoch = 1.986
+[37m[36mINFO[0m[0m::04/07 19:56:02 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 20:03:23 | Step    8100
+|D             3.118 |G             0.762 |FM            0.083 |R_font        0.729 |F_font        0.757 |R_uni         0.566 |F_uni         0.709
+|AC_s          0.012 |AC_c          4.195 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       6.4%
+|AC_g_s        0.056 |AC_g_c        4.464 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     4.0%
+|L1            0.031 |INDP_EXP     0.0084 |INDP_FACT    0.0154
+[37m[36mINFO[0m[0m::04/07 20:10:42 | Step    8200
+|D             3.321 |G             0.574 |FM            0.078 |R_font        0.705 |F_font        0.713 |R_uni         0.552 |F_uni         0.720
+|AC_s          0.023 |AC_c          4.193 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       6.5%
+|AC_g_s        0.026 |AC_g_c        4.433 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     4.2%
+|L1            0.031 |INDP_EXP     0.0085 |INDP_FACT    0.0172
+[37m[36mINFO[0m[0m::04/07 20:18:02 | Step    8300
+|D             3.275 |G             0.647 |FM            0.078 |R_font        0.685 |F_font        0.750 |R_uni         0.578 |F_uni         0.660
+|AC_s          0.016 |AC_c          4.151 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       6.9%
+|AC_g_s        0.040 |AC_g_c        4.361 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     4.0%
+|L1            0.031 |INDP_EXP     0.0074 |INDP_FACT    0.0111
+[37m[36mINFO[0m[0m::04/07 20:25:23 | Step    8400
+|D             3.277 |G             0.653 |FM            0.076 |R_font        0.705 |F_font        0.770 |R_uni         0.547 |F_uni         0.748
+|AC_s          0.010 |AC_c          4.216 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       7.0%
+|AC_g_s        0.014 |AC_g_c        4.495 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.7% |AC_g_acc_c     4.2%
+|L1            0.031 |INDP_EXP     0.0087 |INDP_FACT    0.0086
+[37m[36mINFO[0m[0m::04/07 20:32:44 | Step    8500
+|D             3.259 |G             0.577 |FM            0.078 |R_font        0.748 |F_font        0.723 |R_uni         0.583 |F_uni         0.698
+|AC_s          0.014 |AC_c          4.230 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       6.6%
+|AC_g_s        0.027 |AC_g_c        4.572 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0080 |INDP_FACT    0.0124
+[37m[36mINFO[0m[0m::04/07 20:40:03 | Step    8600
+|D             3.286 |G             0.567 |FM            0.079 |R_font        0.730 |F_font        0.703 |R_uni         0.557 |F_uni         0.700
+|AC_s          0.016 |AC_c          4.140 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       7.1%
+|AC_g_s        0.021 |AC_g_c        4.522 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     3.6%
+|L1            0.031 |INDP_EXP     0.0084 |INDP_FACT    0.0186
+[37m[36mINFO[0m[0m::04/07 20:47:21 | Step    8700
+|D             3.159 |G             0.696 |FM            0.082 |R_font        0.750 |F_font        0.723 |R_uni         0.545 |F_uni         0.740
+|AC_s          0.010 |AC_c          4.030 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       8.1%
+|AC_g_s        0.060 |AC_g_c        4.329 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.7% |AC_g_acc_c     4.7%
+|L1            0.030 |INDP_EXP     0.0072 |INDP_FACT    0.0169
+[37m[36mINFO[0m[0m::04/07 20:54:43 | Step    8800
+|D             3.320 |G             0.702 |FM            0.081 |R_font        0.693 |F_font        0.725 |R_uni         0.537 |F_uni         0.715
+|AC_s          0.006 |AC_c          4.044 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c       8.0%
+|AC_g_s        0.026 |AC_g_c        4.381 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.1% |AC_g_acc_c     4.4%
+|L1            0.030 |INDP_EXP     0.0078 |INDP_FACT    0.0161
+[37m[36mINFO[0m[0m::04/07 21:02:05 | Step    8900
+|D             3.224 |G             0.641 |FM            0.079 |R_font        0.728 |F_font        0.733 |R_uni         0.485 |F_uni         0.738
+|AC_s          0.015 |AC_c          4.169 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       7.8%
+|AC_g_s        0.076 |AC_g_c        4.546 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.2% |AC_g_acc_c     4.2%
+|L1            0.031 |INDP_EXP     0.0098 |INDP_FACT    0.0191
+[37m[36mINFO[0m[0m::04/07 21:09:25 | Step    9000
+|D             3.170 |G             0.743 |FM            0.081 |R_font        0.748 |F_font        0.790 |R_uni         0.515 |F_uni         0.725
+|AC_s          0.013 |AC_c          4.095 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c       8.1%
+|AC_g_s        0.018 |AC_g_c        4.408 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     4.3%
+|L1            0.031 |INDP_EXP     0.0078 |INDP_FACT    0.0135
+[37m[36mINFO[0m[0m::04/07 21:09:25 | Validation at Epoch = 2.234
+[37m[36mINFO[0m[0m::04/07 21:09:38 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 21:16:58 | Step    9100
+|D             3.162 |G             0.698 |FM            0.086 |R_font        0.790 |F_font        0.743 |R_uni         0.527 |F_uni         0.708
+|AC_s          0.014 |AC_c          4.013 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       8.5%
+|AC_g_s        0.031 |AC_g_c        4.388 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     4.3%
+|L1            0.030 |INDP_EXP     0.0060 |INDP_FACT    0.0152
+[37m[36mINFO[0m[0m::04/07 21:24:18 | Step    9200
+|D             3.132 |G             0.769 |FM            0.083 |R_font        0.740 |F_font        0.797 |R_uni         0.487 |F_uni         0.713
+|AC_s          0.014 |AC_c          4.035 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       8.7%
+|AC_g_s        0.045 |AC_g_c        4.348 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.9% |AC_g_acc_c     4.6%
+|L1            0.030 |INDP_EXP     0.0083 |INDP_FACT    0.0126
+[37m[36mINFO[0m[0m::04/07 21:31:40 | Step    9300
+|D             3.242 |G             0.659 |FM            0.081 |R_font        0.728 |F_font        0.743 |R_uni         0.507 |F_uni         0.600
+|AC_s          0.015 |AC_c          4.086 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       8.2%
+|AC_g_s        0.033 |AC_g_c        4.465 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.1% |AC_g_acc_c     4.0%
+|L1            0.031 |INDP_EXP     0.0075 |INDP_FACT    0.0127
+[37m[36mINFO[0m[0m::04/07 21:39:00 | Step    9400
+|D             3.126 |G             0.651 |FM            0.082 |R_font        0.750 |F_font        0.733 |R_uni         0.500 |F_uni         0.517
+|AC_s          0.008 |AC_c          4.030 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c       8.9%
+|AC_g_s        0.023 |AC_g_c        4.479 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.3% |AC_g_acc_c     4.5%
+|L1            0.030 |INDP_EXP     0.0068 |INDP_FACT    0.0131
+[37m[36mINFO[0m[0m::04/07 21:46:21 | Step    9500
+|D             3.180 |G             0.662 |FM            0.082 |R_font        0.740 |F_font        0.752 |R_uni         0.562 |F_uni         0.618
+|AC_s          0.016 |AC_c          3.977 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c       9.4%
+|AC_g_s        0.043 |AC_g_c        4.320 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.9% |AC_g_acc_c     4.9%
+|L1            0.031 |INDP_EXP     0.0075 |INDP_FACT    0.0117
+[37m[36mINFO[0m[0m::04/07 21:53:42 | Step    9600
+|D             3.234 |G             0.652 |FM            0.081 |R_font        0.740 |F_font        0.698 |R_uni         0.542 |F_uni         0.660
+|AC_s          0.009 |AC_c          3.997 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c       9.5%
+|AC_g_s        0.069 |AC_g_c        4.298 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.3% |AC_g_acc_c     5.2%
+|L1            0.029 |INDP_EXP     0.0066 |INDP_FACT    0.0143
+[37m[36mINFO[0m[0m::04/07 22:01:01 | Step    9700
+|D             3.160 |G             0.686 |FM            0.081 |R_font        0.743 |F_font        0.745 |R_uni         0.530 |F_uni         0.652
+|AC_s          0.004 |AC_c          3.946 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.9% |AC_acc_c       9.1%
+|AC_g_s        0.041 |AC_g_c        4.293 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     4.9%
+|L1            0.030 |INDP_EXP     0.0072 |INDP_FACT    0.0113
+[37m[36mINFO[0m[0m::04/07 22:08:23 | Step    9800
+|D             3.198 |G             0.807 |FM            0.084 |R_font        0.693 |F_font        0.775 |R_uni         0.497 |F_uni         0.743
+|AC_s          0.012 |AC_c          3.957 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c       9.8%
+|AC_g_s        0.036 |AC_g_c        4.330 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     5.2%
+|L1            0.030 |INDP_EXP     0.0065 |INDP_FACT    0.0125
+[37m[36mINFO[0m[0m::04/07 22:15:44 | Step    9900
+|D             3.193 |G             0.664 |FM            0.079 |R_font        0.738 |F_font        0.743 |R_uni         0.552 |F_uni         0.680
+|AC_s          0.009 |AC_c          3.970 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c      10.0%
+|AC_g_s        0.019 |AC_g_c        4.426 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     4.7%
+|L1            0.029 |INDP_EXP     0.0067 |INDP_FACT    0.0135
+[37m[36mINFO[0m[0m::04/07 22:23:05 | Step   10000
+|D             3.161 |G             0.696 |FM            0.081 |R_font        0.760 |F_font        0.738 |R_uni         0.500 |F_uni         0.710
+|AC_s          0.016 |AC_c          3.933 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c      10.0%
+|AC_g_s        0.018 |AC_g_c        4.365 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.4% |AC_g_acc_c     5.0%
+|L1            0.030 |INDP_EXP     0.0076 |INDP_FACT    0.0141
+[37m[36mINFO[0m[0m::04/07 22:23:05 | Validation at Epoch = 2.482
+[37m[36mINFO[0m[0m::04/07 22:23:18 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 22:30:39 | Step   10100
+|D             3.169 |G             0.757 |FM            0.082 |R_font        0.748 |F_font        0.767 |R_uni         0.547 |F_uni         0.713
+|AC_s          0.016 |AC_c          3.903 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c      10.6%
+|AC_g_s        0.053 |AC_g_c        4.319 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     5.5%
+|L1            0.030 |INDP_EXP     0.0068 |INDP_FACT    0.0193
+[37m[36mINFO[0m[0m::04/07 22:38:01 | Step   10200
+|D             3.192 |G             0.720 |FM            0.081 |R_font        0.765 |F_font        0.750 |R_uni         0.480 |F_uni         0.600
+|AC_s          0.019 |AC_c          3.912 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.5% |AC_acc_c      10.3%
+|AC_g_s        0.042 |AC_g_c        4.344 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     5.2%
+|L1            0.029 |INDP_EXP     0.0071 |INDP_FACT    0.0149
+[37m[36mINFO[0m[0m::04/07 22:45:21 | Step   10300
+|D             3.155 |G             0.656 |FM            0.081 |R_font        0.757 |F_font        0.708 |R_uni         0.525 |F_uni         0.515
+|AC_s          0.018 |AC_c          3.882 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.5% |AC_acc_c      10.7%
+|AC_g_s        0.021 |AC_g_c        4.337 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     5.6%
+|L1            0.029 |INDP_EXP     0.0066 |INDP_FACT    0.0164
+[37m[36mINFO[0m[0m::04/07 22:52:41 | Step   10400
+|D             3.194 |G             0.663 |FM            0.080 |R_font        0.743 |F_font        0.728 |R_uni         0.522 |F_uni         0.497
+|AC_s          0.010 |AC_c          3.886 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c      11.2%
+|AC_g_s        0.053 |AC_g_c        4.331 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.5% |AC_g_acc_c     5.7%
+|L1            0.028 |INDP_EXP     0.0059 |INDP_FACT    0.0160
+[37m[36mINFO[0m[0m::04/07 23:00:03 | Step   10500
+|D             3.157 |G             0.720 |FM            0.080 |R_font        0.748 |F_font        0.760 |R_uni         0.562 |F_uni         0.463
+|AC_s          0.013 |AC_c          3.862 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c      11.2%
+|AC_g_s        0.051 |AC_g_c        4.356 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.9% |AC_g_acc_c     5.5%
+|L1            0.029 |INDP_EXP     0.0071 |INDP_FACT    0.0173
+[37m[36mINFO[0m[0m::04/07 23:07:23 | Step   10600
+|D             3.133 |G             0.687 |FM            0.082 |R_font        0.770 |F_font        0.730 |R_uni         0.560 |F_uni         0.585
+|AC_s          0.007 |AC_c          3.780 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c      12.1%
+|AC_g_s        0.049 |AC_g_c        4.197 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.7% |AC_g_acc_c     6.6%
+|L1            0.029 |INDP_EXP     0.0059 |INDP_FACT    0.0166
+[37m[36mINFO[0m[0m::04/07 23:14:44 | Step   10700
+|D             3.213 |G             0.642 |FM            0.077 |R_font        0.745 |F_font        0.750 |R_uni         0.542 |F_uni         0.725
+|AC_s          0.013 |AC_c          3.933 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c      11.3%
+|AC_g_s        0.031 |AC_g_c        4.355 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.2% |AC_g_acc_c     5.7%
+|L1            0.029 |INDP_EXP     0.0072 |INDP_FACT    0.0176
+[37m[36mINFO[0m[0m::04/07 23:22:05 | Step   10800
+|D             3.099 |G             0.786 |FM            0.081 |R_font        0.718 |F_font        0.797 |R_uni         0.522 |F_uni         0.557
+|AC_s          0.006 |AC_c          3.855 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.8% |AC_acc_c      11.5%
+|AC_g_s        0.041 |AC_g_c        4.280 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     5.9%
+|L1            0.029 |INDP_EXP     0.0063 |INDP_FACT    0.0169
+[37m[36mINFO[0m[0m::04/07 23:29:27 | Step   10900
+|D             3.092 |G             0.836 |FM            0.081 |R_font        0.757 |F_font        0.800 |R_uni         0.588 |F_uni         0.740
+|AC_s          0.013 |AC_c          3.889 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.7% |AC_acc_c      11.6%
+|AC_g_s        0.071 |AC_g_c        4.370 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.4% |AC_g_acc_c     5.6%
+|L1            0.029 |INDP_EXP     0.0067 |INDP_FACT    0.0188
+[37m[36mINFO[0m[0m::04/07 23:36:48 | Step   11000
+|D             3.177 |G             0.695 |FM            0.079 |R_font        0.735 |F_font        0.760 |R_uni         0.532 |F_uni         0.590
+|AC_s          0.015 |AC_c          3.763 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c      12.2%
+|AC_g_s        0.027 |AC_g_c        4.169 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    99.0% |AC_g_acc_c     6.4%
+|L1            0.028 |INDP_EXP     0.0063 |INDP_FACT    0.0166
+[37m[36mINFO[0m[0m::04/07 23:36:48 | Validation at Epoch = 2.730
+[37m[36mINFO[0m[0m::04/07 23:37:01 | Checkpoint is saved to result5/checkpoints/last.pth
+
+[37m[36mINFO[0m[0m::04/07 23:44:22 | Step   11100
+|D             3.147 |G             0.673 |FM            0.077 |R_font        0.718 |F_font        0.723 |R_uni         0.565 |F_uni         0.713
+|AC_s          0.016 |AC_c          3.803 |cr_AC_s      -5.919 |cr_AC_c      -1.809 |AC_acc_s      99.6% |AC_acc_c      12.7%
+|AC_g_s        0.040 |AC_g_c        4.257 |cr_AC_g_s    -5.919 |cr_AC_g_c    -1.809 |AC_g_acc_s    98.8% |AC_g_acc_c     6.2%
+|L1            0.028 |INDP_EXP     0.0076 |INDP_FACT    0.0190
